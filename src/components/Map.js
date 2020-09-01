@@ -1,6 +1,7 @@
 import React from 'react';
 import mapboxgl from 'mapbox-gl';
-import './App.css';
+import '../App.css';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 class Map extends React.Component {
   state = {
