@@ -5,7 +5,7 @@ import './App.css';
 
 class App extends React.Component {
   render() {
-    return <Map />;
+    return <DrivingDirection />;
   }
 }
 

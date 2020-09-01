@@ -2,10 +2,9 @@ import React from 'react';
 import mapboxgl from 'mapbox-gl';
 import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions';
 import '../App.css';
-import 'mapbox-gl/dist/mapbox-gl.css';
 import '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css';
 
-class Map extends React.Component {
+class DrivingDirection extends React.Component {
   state = {
     lng: 2.333,
     lat: 48.83,
@@ -20,11 +19,10 @@ class Map extends React.Component {
       zoom: this.state.zoom,
     });
 
-    const directions = new MapboxDirections({
+    var directions = new MapboxDirections({
       accessToken: mapboxgl.accessToken,
       unit: 'metric',
-      profile: 'driving',
-      container: 'directions',
+      profile: 'mapbox/cycling',
     });
 
     map.addControl(directions, 'top-left');
@@ -39,4 +37,4 @@ class Map extends React.Component {
   }
 }
 
-export default Map;
+export default DrivingDirection;
